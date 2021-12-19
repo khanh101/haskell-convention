@@ -9,4 +9,8 @@ cabal run
 
 # table of contents
 
-## Value and Function
+## function, type, and kind
+
+
+
+

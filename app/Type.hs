@@ -1,13 +1,17 @@
 module Type where
 {-
-in haskell type is not value/function
-type constructor is a value/function
+in haskell, 
 
-any type has kind other than * can not be the type of value/function
+every type has a kind
+e.g
+- *
+- * -> *
+- * -> * -> *
 
-we call type of with kind * : concrete type
-otherwise, we call abstract type
+type with kind * is called concrete type
+any other type is called abstract type
 -}
+
 
 -- type alias
 type MyInteger = Integer
