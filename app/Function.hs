@@ -32,6 +32,10 @@ add20 = add 20
 add20to30 :: Integer
 add20to30 = add20 30 -- the same as add 20 30 (function application is left precedence)
 
+-- infix notation
+add20to30Infix :: Integer
+add20to30Infix = 20 `add` 30
+
 -- generics: a function can be defined for several types
 takeFirst :: a -> a -> a -- a can be any type
 takeFirst x y = x

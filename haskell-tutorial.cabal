@@ -32,6 +32,7 @@ executable haskell-tutorial
         Type
         TypeClass
         Branch
+        Description
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
