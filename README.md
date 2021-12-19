@@ -9,8 +9,29 @@ cabal run
 
 # table of contents
 
-## function, type, and kind
+## first-class
 
+- name: value, function
+
+- type
+
+  - value: Integer
+
+  - function: Integer -> Integer, Integer -> Integer -> Integer, etc.
+
+## second-class
+
+- name: concrete type, abstract type
+
+- kind
+
+  - concrete type: *
+  
+  - abstract type: * -> *, * -> * -> *, etc.
+  
+## third-class
+
+- name: kind
 
 
 
