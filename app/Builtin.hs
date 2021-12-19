@@ -1,7 +1,9 @@
 module Builtin where
 
-
+-- list
 data MyList a = MyListEmpty | MyListCons a (MyList a) deriving (Show)
+-- list (builtin)
+type List a = [a]
 
 -- construct a list
 myListEmpty = MyListEmpty
@@ -19,6 +21,6 @@ myHead MyListEmpty = error "empty list"
 myHead (x `MyListCons` xs) = x
 
 -- head function (builtin)
-builtinHead :: [a] -> a
+builtinHead :: List a -> a
 builtinHead [] = error "empty list"
 builtinHead (x:xs) = x
