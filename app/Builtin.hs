@@ -1,17 +1,7 @@
 module Builtin where
 
 
-data MyList a = MyListEmpty | MyListCons a (MyList a)
-
--- show
-toString :: MyList a -> String
-toString MyListEmpty = "" -- empty list
-toString (x `MyListCons` MyListEmpty) = show x -- single item list
-toString (x `MyListCons` y `MyListCons` lst) = (show x) ++ toString (y `MyListCons` lst) -- at least two items list
-
-instance Show (MyList a) where
-    show :: MyList a -> String
-    show l = "[" ++ toString l ++ "]"
+data MyList a = MyListEmpty | MyListCons a (MyList a) deriving (Show)
 
 -- construct a list
 myListEmpty = MyListEmpty

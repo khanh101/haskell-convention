@@ -33,6 +33,7 @@ executable haskell-tutorial
         TypeClass
         Branch
         Description
+        Builtin
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
