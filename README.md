@@ -13,21 +13,31 @@ cabal run
 
 - name: value, function
 
+- example
+  
+  - value: `1`, `2`
+  
+  - function: `\x -> x+1`
+
 - type
 
   - value: `Integer`
 
-  - function: `Integer -> Integer`, `Integer -> Integer -> Integer`, etc.
+  - function: `Integer -> Integer`
 
 ## second-class
 
 - name: concrete type, abstract type
 
+- example
+  
+  - concrete type: `Integer`, `Integer -> Integer`
+
 - kind
 
   - concrete type: `*`
   
-  - abstract type: `* -> *`, `* -> * -> *`, etc.
+  - abstract type: `* -> *`
   
 ## third-class
 
