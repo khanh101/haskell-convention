@@ -1,11 +1,11 @@
-module ValueAndFunction where
+module Function where
 {-
 in haskell, there are three builtin properties of objects
 1. value: value of value 1 is 1, value of add function is the add function, etc.
 2. type: type of value 1 is Integer, type of add function is Integer -> Integer -> Integer
 3. kind: kind of Integer is *, kind of Integer -> Integer -> Integer is *
 
-value and function in haskell can be grouped into a class.
+value and function in haskell can be grouped into a class
 -}
 
 

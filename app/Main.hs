@@ -1,8 +1,9 @@
 module Main where
 
-import ValueAndFunction
-import TypeAndConstructor
+import Function
+import Type
 import TypeClass
+import FunctionDefinition
 
 main :: IO ()
 main = do

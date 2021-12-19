@@ -1,7 +1,12 @@
-module TypeAndConstructor where
+module Type where
 {-
-in haskell type is not value
+in haskell type is not value/function
 type constructor is a value/function
+
+any type has kind other than * can not be the type of value/function
+
+we call type of with kind * : concrete type
+otherwise, we call abstract type
 -}
 
 -- type alias
@@ -10,7 +15,7 @@ type MyInteger = Integer
 -- define a type
 -- a value of type MyBox can be either an EmptyBox, an IntegerBox, or a StringBox
 
--- MyBox is a type
+-- MyBox is a type (concrete type)
 -- kind of MyBox: * (same as Integer)
 
 -- EmptyBox, IntegerBox, StringBox, PairBox are type constructors (value/function)
@@ -25,10 +30,10 @@ data MyBox = EmptyBox | IntegerBox Integer | StringBox [Char] | PairBox Integer 
 
 -- define a class of type (using param)
 
--- MyBoxWithType is not a type
+-- MyBoxWithType is a type (abstract type)
 -- kind of MyBoxWithType:  * -> * -> * (receive 2 types to become a new type)
--- MyBoxWithType Integer Integer is a type
--- MyBoxWithType [Char] Integer is a type
+-- MyBoxWithType Integer Integer is a type (conrete type)
+-- MyBoxWithType [Char] Integer is a type (conrete type)
 
 -- EmptyBoxWithType and PairBoxWithType are type constructors (value/function)
 -- type of EmptyBoxWithType: MyBoxWithType
