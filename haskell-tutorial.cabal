@@ -30,7 +30,7 @@ executable haskell-tutorial
     other-modules:
         Function
         Type
-        TypeClass
+        Class
         Branch
         Description
         Builtin

@@ -2,7 +2,7 @@ module Main where
 
 import Function
 import Type
-import TypeClass
+import Class
 import Branch
 import Description
 import Builtin

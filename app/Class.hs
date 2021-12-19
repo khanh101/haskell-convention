@@ -1,7 +1,7 @@
-module TypeClass where
+module Class where
 {-
-type class is like an interface in other programming language
-kind of type class: * -> Constraint
+class is like an interface in other programming language
+kind of class: * -> Constraint
 -}
 
 -- define a type class Add1
