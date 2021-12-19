@@ -3,7 +3,7 @@ module Main where
 import Function
 import Type
 import TypeClass
-import FunctionDefinition
+import Branch
 
 main :: IO ()
 main = do
