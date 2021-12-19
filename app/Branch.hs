@@ -7,7 +7,7 @@ data MyBox = EmptyBox | IntegerBox Integer
 -- and use the corresponding function definition
 getIntegerFromBox :: MyBox -> Integer
 getIntegerFromBox EmptyBox = 0
-getIntegerFromBox IntegerBox x = x
+getIntegerFromBox (IntegerBox x) = x
 
 -- guard
 -- intepret this expression
@@ -20,12 +20,12 @@ sign x | x > 0 = 1 | x < 0 = -1 | otherwise = 0
 
 -- case of (similar to pattern matching)
 -- intepret this expression
--- case box of EmptyBox -> 0 of IntegerBox x -> x
+-- case box of EmptyBox -> 0 ; (IntegerBox x) -> x
 -- if box matches EmptyBox, replace the expression by 0
 -- if box matches IntegerBox x, replace the expression by x
 getIntegerFromBoxWithCase :: MyBox -> Integer
 getIntegerFromBoxWithCase box =
-    case box of EmptyBox -> 0 of IntegerBox x -> x
+    case box of EmptyBox -> 0 ; (IntegerBox x) -> x -- ; can be replaced by \n
 
 
 
