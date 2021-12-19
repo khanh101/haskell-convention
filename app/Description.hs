@@ -4,7 +4,7 @@ module Description where
 -- intepret this expression
 -- let x = 2; y = 3 in x + y
 -- as
--- replace name in let statement into in expression
+-- replace name expression by name in let statement
 eight :: Integer
 eight = (let x = 2 in x + 1) + (let x = 2; y = 3 in x + y)
 
