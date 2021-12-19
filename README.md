@@ -15,9 +15,9 @@ cabal run
 
 - type
 
-  - value: Integer
+  - value: `Integer`
 
-  - function: Integer -> Integer, Integer -> Integer -> Integer, etc.
+  - function: `Integer -> Integer`, `Integer -> Integer -> Integer`, etc.
 
 ## second-class
 
@@ -25,9 +25,9 @@ cabal run
 
 - kind
 
-  - concrete type: *
+  - concrete type: `*`
   
-  - abstract type: * -> *, * -> * -> *, etc.
+  - abstract type: `* -> *`, `* -> * -> *`, etc.
   
 ## third-class
 
