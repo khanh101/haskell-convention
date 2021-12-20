@@ -1,5 +1,6 @@
 # haskell_tutorial
-the computer science way to define haskell
+
+my haskell convention
 
 # run code
 

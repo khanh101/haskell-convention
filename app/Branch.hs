@@ -1,6 +1,11 @@
+{-# LANGUAGE GADTs #-}
+{-# LANGUAGE KindSignatures #-}
 module Branch where
 
-data MyBox = EmptyBox | IntBox Int
+data MyBox :: * where
+    EmptyBox :: MyBox
+    IntBox :: Int -> MyBox
+
 
 -- patern matching
 -- haskell compile will match argument to each case

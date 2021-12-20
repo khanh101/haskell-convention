@@ -1,3 +1,5 @@
+{-# LANGUAGE GADTs #-}
+{-# LANGUAGE KindSignatures #-}
 module Type where
 {-
 in haskell, 
@@ -30,7 +32,23 @@ type MyInt = Int
 
 -- any value of type MyBox can only be defined by one of its constructors
 -- that enable pattern matching in haskell (very convenient concept)
-data MyBox = EmptyBox | IntBox Int | StringBox [Char] | PairBox Int Int
+data MyBox :: * where
+    EmptyBox :: MyBox
+    IntBox :: Int -> MyBox
+    StringBox :: [Char] -> MyBox
+    PairBox :: Int -> Int -> MyBox
+
+emptyBox :: MyBox
+emptyBox = EmptyBox
+
+box1 :: MyBox
+box1 = IntBox 1
+
+boxhello :: MyBox
+boxhello = StringBox "hello"
+
+pair12 :: MyBox
+pair12 = PairBox 1 2
 
 -- define a class of type (using param)
 
@@ -40,10 +58,19 @@ data MyBox = EmptyBox | IntBox Int | StringBox [Char] | PairBox Int Int
 -- MyBoxWithType [Char] Int is a type (conrete type)
 
 -- EmptyBoxWithType and PairBoxWithType are type constructors (value/function)
--- type of EmptyBoxWithType: MyBoxWithType
+-- type of EmptyBoxWithType: MyBoxWithType a b
 -- type of PairBoxWithType: a -> b -> MyBoxWithType a b
 
-data MyBoxWithType a b = EmptyBoxWithType | PairBoxWithType a b
+data MyBoxWithType :: * -> * -> * where
+    EmptyBoxWithType :: MyBoxWithType a b
+    PairBoxWithType :: a -> b -> MyBoxWithType a b
+
+emptyBoxWithType :: MyBoxWithType a b
+emptyBoxWithType = EmptyBoxWithType
+
+pairBoxWithType :: MyBoxWithType Int [Char]
+pairBoxWithType = PairBoxWithType 1 "1"
+
 
 
 

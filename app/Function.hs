@@ -47,3 +47,7 @@ addNum x y = x + y
 -- lambda
 addLambda :: Int -> Int -> Int 
 addLambda = \x y -> x + y
+
+-- infix operator
+(#) :: Int -> Int -> Bool
+(#) a b = a /= b
