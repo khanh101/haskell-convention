@@ -1,6 +1,10 @@
 # haskell_tutorial
 
-my haskell convention
+my haskell convention - done right
+
+# latest haskell documentation
+
+https://downloads.haskell.org/ghc/latest/docs/html/
 
 # run code
 

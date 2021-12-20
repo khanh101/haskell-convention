@@ -1,3 +1,5 @@
+{-# LANGUAGE GADTs #-}
+{-# LANGUAGE KindSignatures #-}
 module Functor where
 
 {-
@@ -10,7 +12,10 @@ myFmap transforms a function of type (a -> b) into a function of type (f a -> f 
 class MyFunctor f where
     myFmap :: (a -> b) -> f a -> f b
 
-newtype Box a = BoxConstructor a deriving (Show)
+data Box :: * -> * where
+    BoxConstructor :: a -> Box a
+    deriving (Show)
+
 
 instance MyFunctor Box where
     myFmap map (BoxConstructor x) = BoxConstructor (map x)
