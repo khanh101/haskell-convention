@@ -1,4 +1,4 @@
-# haskell_tutorial
+# haskell-convention
 
 haskell convention - done right
 
