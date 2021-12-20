@@ -15,6 +15,10 @@ data Box a = BoxConstructor a deriving (Show)
 instance MyFunctor Box where
     myFmap map = \(BoxConstructor x) -> BoxConstructor (map x)
 
+-- built-in
+instance Functor Box where
+    fmap map = \(BoxConstructor x) -> BoxConstructor (map x)
+
 toDouble :: Int -> Double
 toDouble = fromIntegral
 
@@ -23,3 +27,7 @@ box1 = BoxConstructor 123
 
 box2 :: Box Double
 box2 = myFmap toDouble box1
+
+-- built-in
+box3 :: Box Double 
+box3 = fmap toDouble box1
