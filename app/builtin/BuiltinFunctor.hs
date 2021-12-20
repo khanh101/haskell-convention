@@ -1,6 +1,6 @@
 {-# LANGUAGE GADTs #-}
 {-# LANGUAGE KindSignatures #-}
-module Functor where
+module BuiltinFunctor where
 
 {-
 functor behaves like functor in category theory

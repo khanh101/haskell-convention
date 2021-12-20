@@ -1,6 +1,6 @@
 {-# LANGUAGE GADTs #-}
 {-# LANGUAGE KindSignatures #-}
-module Builtin where
+module BuiltinList where
 
 -- list
 data MyList :: * -> * where

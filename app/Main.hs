@@ -5,8 +5,8 @@ import Type ()
 import Class ()
 import Branch ()
 import Description ()
-import Builtin ()
-import Functor ()
+import BuiltinList ()
+import BuiltinFunctor ()
 
 main :: IO ()
 main = do
