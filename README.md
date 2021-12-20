@@ -21,9 +21,9 @@ cabal run
 
 - type of
 
-  - value: `Integer`
+  - value: `Int`
 
-  - function: `Integer -> Integer`
+  - function: `Int -> Int`
 
 ## second-class
 
@@ -31,7 +31,7 @@ cabal run
 
 - examples
   
-  - concrete type: `Integer`, `Integer -> Integer`
+  - concrete type: `Int`, `Int -> Int`
 
 - kind of
 
