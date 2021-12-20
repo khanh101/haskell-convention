@@ -43,3 +43,8 @@ takeFirst x y = x
 -- generics with constraint
 addNum :: Num a => a -> a -> a -- a must belong to type class Num
 addNum x y = x + y
+
+-- lambda
+addLambda :: Integer -> Integer -> Integer 
+addLambda = \x y -> x + y
+ 
