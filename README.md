@@ -11,15 +11,15 @@ cabal run
 
 ## first-class
 
-- name: value, function
+- entities: value, function
 
-- example
+- examples
   
   - value: `1`, `2`
   
   - function: `\x -> x+1`
 
-- type
+- type of
 
   - value: `Integer`
 
@@ -27,13 +27,13 @@ cabal run
 
 ## second-class
 
-- name: concrete type, abstract type
+- entities: concrete type, abstract type
 
-- example
+- examples
   
   - concrete type: `Integer`, `Integer -> Integer`
 
-- kind
+- kind of
 
   - concrete type: `*`
   
@@ -41,7 +41,11 @@ cabal run
   
 ## third-class
 
-- name: kind
+- entities: kind
+
+- examples
+
+  - kind: `*`, `* -> *`
 
 
 
