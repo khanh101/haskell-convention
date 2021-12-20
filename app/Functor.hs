@@ -10,10 +10,10 @@ myFmap transforms a function of type (a -> b) into a function of type (f a -> f 
 class MyFunctor f where
     myFmap :: (a -> b) -> f a -> f b
 
-data Box a = BoxConstructor a deriving (Show)
+newtype Box a = BoxConstructor a deriving (Show)
 
 instance MyFunctor Box where
-    myFmap map = \(BoxConstructor x) -> BoxConstructor (map x)
+    myFmap map (BoxConstructor x) = BoxConstructor (map x)
 
 -- built-in
 instance Functor Box where
