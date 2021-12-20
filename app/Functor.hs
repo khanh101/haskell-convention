@@ -16,10 +16,10 @@ instance MyFunctor Box where
     myFmap map = \(BoxConstructor x) -> BoxConstructor (map x)
 
 toDouble :: Int -> Double
-toDouble x = fromIntegral x
+toDouble = fromIntegral
 
 box1 :: Box Int
 box1 = BoxConstructor 123
 
 box2 :: Box Double
-box2 = (myFmap toDouble) box1
+box2 = myFmap toDouble box1

@@ -34,6 +34,7 @@ executable haskell-tutorial
         Branch
         Description
         Builtin
+        Functor
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
