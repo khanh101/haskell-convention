@@ -1,6 +1,6 @@
 # haskell_tutorial
 
-my haskell convention - done right
+haskell convention - done right
 
 # latest haskell documentation
 
